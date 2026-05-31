@@ -1,7 +1,11 @@
 # RunDrill plugin marketplace
 
-The public **install index** for RunDrill courses. Each course ships as one plugin — a
-`<subject>-coach` skill backed by an MCP drill engine (curriculum, progress, mistake memory).
+The public **install index** for RunDrill's programming & professional courses. Each course ships
+as one plugin — a `<subject>-coach` skill backed by an MCP drill engine (curriculum, progress,
+mistake memory).
+
+Natural-language courses (English, Kazakh, …) live in the sibling
+[`rundrill/rundrill-lang`](https://github.com/rundrill/rundrill-lang) marketplace.
 
 This repo holds only the catalogs; the course plugins live in their own repos under the
 [`rundrill`](https://github.com/rundrill) org and are referenced by Git source. Two catalogs cover
@@ -17,10 +21,11 @@ Authoring scaffolding (`_template/`) lives in the private development monorepo, 
 **Claude Code / Claude Desktop** — via this marketplace:
 ```
 /plugin marketplace add rundrill/rundrill        # the org/repo of this index
-/plugin install rundrill-english@rundrill            # <plugin-name>@<marketplace-name>
-/reload-plugins                                      # → /english-coach is live
+/plugin install rundrill-python@rundrill             # <plugin-name>@<marketplace-name>
+/reload-plugins                                      # → /python-coach is live
 ```
 `@rundrill` is the marketplace `name` field (set in `marketplace.json`), not the repo name.
+(Language courses install from the other index: `rundrill-english@rundrill-lang`.)
 
 **OpenAI Codex** — via this marketplace too:
 ```
@@ -29,29 +34,29 @@ codex plugin marketplace add rundrill/rundrill    # GitHub shorthand; reads .age
 Then open the plugin directory, pick the **RunDrill** marketplace, and install the course.
 
 **Google Antigravity** — no marketplace; Antigravity scans plugin dirs. Drop a course folder in:
-- `~/.gemini/config/plugins/rundrill-english/` (global, all workspaces), or
-- `<workspace>/.agents/plugins/rundrill-english/` (workspace-scoped).
+- `~/.gemini/config/plugins/rundrill-python/` (global, all workspaces), or
+- `<workspace>/.agents/plugins/rundrill-python/` (workspace-scoped).
 
 ## Registering a published course
 
-A course plugin lives in its own repo (e.g. `rundrill/rundrill-english`). Add one entry to **each**
+A course plugin lives in its own repo (e.g. `rundrill/rundrill-python`). Add one entry to **each**
 catalog, pinned to a released tag (`ref`, and optionally a full-commit `sha`) so users don't pull
 unfinished work.
 
 `.claude-plugin/marketplace.json` (Claude — `github` source):
 ```json
 {
-  "name": "rundrill-english",
-  "source": { "source": "github", "repo": "rundrill/rundrill-english", "ref": "v0.1.0" },
-  "description": "English coach — drills, progress, and mistake memory."
+  "name": "rundrill-python",
+  "source": { "source": "github", "repo": "rundrill/rundrill-python", "ref": "v0.2.11" },
+  "description": "Python coach — read and review code (incl. AI-generated) with drills, progress, and mistake memory."
 }
 ```
 
 `.agents/plugins/marketplace.json` (Codex — `url` source; always include `policy` + `category`):
 ```json
 {
-  "name": "rundrill-english",
-  "source": { "source": "url", "url": "https://github.com/rundrill/rundrill-english.git", "ref": "v0.1.0" },
+  "name": "rundrill-python",
+  "source": { "source": "url", "url": "https://github.com/rundrill/rundrill-python.git", "ref": "v0.2.11" },
   "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
   "category": "Education"
 }
