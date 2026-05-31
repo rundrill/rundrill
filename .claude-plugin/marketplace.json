@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "RunDrill course plugins. Each plugin is one course: a <subject>-coach skill backed by an MCP drill engine (curriculum, progress, mistake memory).",
-    "version": "0.10.11"
+    "version": "0.10.12"
   },
   "plugins": [
     {
@@ -35,6 +35,15 @@
         "ref": "v0.2.11"
       },
       "description": "Python coach — learn to read and review code (incl. AI-generated) with drills, progress, and mistake memory, plus optional hands-on exercises."
+    },
+    {
+      "name": "rundrill-js",
+      "source": {
+        "source": "github",
+        "repo": "rundrill/rundrill-js",
+        "ref": "v0.1.0"
+      },
+      "description": "JavaScript & TypeScript coach — learn to read, trace, and review code (incl. AI-generated) with drills, progress, and mistake memory, plus optional hands-on exercises. TypeScript woven into the language spine; opt-in Frontend, Backend/Node, and Engine-Internals tracks. The signature drill hands you plausible AI-written JS/TS with the bug unlabeled (==/coercion, this-loss, var loop-closure, un-awaited promise, innerHTML XSS, over-confident `as`) to find and name, like a PR review."
     },
     {
       "name": "rundrill-rust",
