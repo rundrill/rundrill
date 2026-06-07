@@ -140,9 +140,9 @@
       "source": {
         "source": "github",
         "repo": "rundrill/rundrill-english-exam",
-        "ref": "v0.1.2"
+        "ref": "v0.1.3"
       },
-      "description": "Independent prep for the IELTS Academic exam — timed drills self-scored against the public band descriptors, with per-module bands, a predicted overall, and error-log-driven re-drill. Writing/Speaking score against the public band-descriptor lines for your target band; Listening/Reading against an answer key + raw-to-band. A Russian-speaker focus targets the L1 transfers (articles, the dropped 'to be', present perfect) that cap Russian speakers. Assumes working English (B1+). 'IELTS' names the exam this tool preps for; RunDrill is not affiliated with or endorsed by its trademark owners."
+      "description": "Independent prep for the IELTS exam — Academic or General Training — timed drills self-scored against the public band descriptors, with per-module bands, a predicted overall, and error-log-driven re-drill. Pick your format at the start; General Training swaps in a Writing Task 1 letter and everyday/workplace reading (Listening and Speaking are the same in both). Writing/Speaking score against the public band-descriptor lines for your target band; Listening/Reading against an answer key + raw-to-band. A Russian-speaker focus targets the L1 transfers (articles, the dropped 'to be', present perfect) that cap Russian speakers. Assumes working English (B1+). 'IELTS' names the exam this tool preps for; RunDrill is not affiliated with or endorsed by its trademark owners."
     }
   ]
 }
