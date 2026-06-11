@@ -68,7 +68,7 @@
       "source": {
         "source": "github",
         "repo": "rundrill/rundrill-system-design",
-        "ref": "v0.1.6"
+        "ref": "v0.1.7"
       },
       "description": "System-design coach — design distributed systems & prep the FAANG system design interview by reviewing flawed designs (find the planted SPOF/hotspot/wrong tradeoff), defending tradeoffs, estimating capacity, and running mock interviews."
     },
